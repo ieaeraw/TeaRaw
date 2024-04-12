@@ -1,0 +1,33 @@
+def multiply(x, y):
+    return x * y
+
+def divide(x, y):
+    if y == 0:
+        return "Error! Division by zero."
+    else:
+        return x / y
+
+def main():
+    print("Welcome to the Calculator!")
+    print("1. Multiply")
+    print("2. Divide")
+
+    choice = input("Enter choice (1/2): ")
+
+    if choice == '1':
+        num1 = float(input("Enter the first number: "))
+        num2 = float(input("Enter the second number: "))
+        result = multiply(num1, num2)
+        print("The result of multiplying", num1, "and", num2, "is:", result)
+
+    elif choice == '2':
+        num1 = float(input("Enter the first number (dividend): "))
+        num2 = float(input("Enter the second number (divisor): "))
+        result = divide(num1, num2)
+        print("The result of dividing", num1, "by", num2, "is:", result)
+
+    else:
+        print("Invalid choice!")
+
+if __name__ == "__main__":
+    main()
